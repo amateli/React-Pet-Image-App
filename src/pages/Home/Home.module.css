@@ -1,0 +1,30 @@
+.petBoxGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-gap: 2rem;
+}
+
+.bp {
+  text-align: center;
+  margin: 3rem auto 7rem;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 530px) {
+  .petBoxGrid {
+    gap: 4rem;
+  }
+  .bp {
+    margin-top: 4rem;
+  }
+  .response {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+    text-align: center;
+    margin: auto;
+    min-height: 100vh;
+  }
+}

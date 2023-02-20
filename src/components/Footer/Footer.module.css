@@ -1,0 +1,31 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.flex p span {
+  text-decoration: underline;
+}
+
+.flex p:first-of-type {
+  color: #6D6D6D;
+}
+
+.flex p:last-of-type {
+  color: #BEBEBE;
+}
+
+@media screen and (min-width: 530px) {
+  .flex {
+    position: absolute;
+    bottom: 2.5rem;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+}
