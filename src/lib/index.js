@@ -9,7 +9,7 @@ const getPetImage = (petName) => {
     case 'duck':
       return getDuckImage();
     default:
-      return 'https://images.unsplash.com/photo-1571988840298-3b5301d5109b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60'
+      return 'https://images.unsplash.com/photo-1563460716037-460a3ad24ba9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHBldHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'
   }
 };
 
@@ -32,7 +32,10 @@ const getFoxImage = async () => {
 };
 
 const getDuckImage = async () => {
-  const response = await fetch('https://random-d.uk/api/random');
+  // const lib = require('lib')({token: null /* link an account to create an auth token */});
+// make API request
+  // const response = await lib['random-duck'].api['@2.0.0'].random.jpg();
+  const response = await fetch('https://random-d.uk/api/quack');
   const responsejson = await response.json();
   return responsejson["url"];
 };

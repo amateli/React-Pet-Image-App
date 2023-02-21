@@ -9,13 +9,12 @@ const Pet = () => {
   let {petName} = useParams();
   
   const handleClick = () => {
-    console.log(petImage)
-    setPetImage(petImage)
+    getPetImage(petName).then((petImage) => setPetImage(petImage));
   }
 
-  const [petImage, setPetImage] = useState('');
+  const [petImage, setPetImage] = useState('https://images.unsplash.com/photo-1563460716037-460a3ad24ba9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHBldHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60');
   useEffect(() => {
-    getPetImage(petName).then((petImage) => setPetImage(petImage));
+    // getPetImage(petName).then((petImage) => setPetImage(petImage));
   });
 
   if (!Pets.includes(petName)) {
